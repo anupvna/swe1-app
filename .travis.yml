@@ -12,3 +12,14 @@ script:
 
 after_success:
   - coveralls
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: $AWS_ACCESS_KEY       # Travis will swap this with your ID
+  secret_access_key: $AWS_SECRET_KEY   # Travis will swap this with your Secret
+  region: "us-east-1"
+  app: "swe1-app"
+  env: "Swe1-app-env"
+  bucket_name: "elasticbeanstalk-us-east-1-360752020804"
+  on:
+    branch: main

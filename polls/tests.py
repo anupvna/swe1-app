@@ -7,4 +7,4 @@ class SimpleTest(TestCase):
         self.assertEqual(1 + 1, 2)
 
     def test_dummy(self):
-        self.assertTrue(True)
+        self.assertTrue(False)
